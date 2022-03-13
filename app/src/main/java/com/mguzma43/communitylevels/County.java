@@ -15,4 +15,14 @@ public class County {
         this.cases = cases;
         this.hospitalAdmission = hospitalAdmission;
     }
+
+    public String getCountyName(){ return this.countyName; }
+
+    public String getCommunityLevel(){ return this.communityLevel; }
+
+    public String getBedUtilization(){ return this.bedUtilization; }
+
+    public float getCases(){ return this.cases; }
+
+    public float getHospitalAdmission(){ return this.hospitalAdmission; }
 }

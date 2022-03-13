@@ -36,7 +36,11 @@ public class CountyAdapter extends RecyclerView.Adapter<CountyViewHolder> {
         County county = this.countyList.get(position);
 
         // example
-        //holder.stockSymbol.setText(stock.getStockSymbol());
+        holder.countyName.setText(county.getCountyName());
+        holder.communityLevel.setText(county.getCommunityLevel());
+        holder.bedUsage.setText(county.getBedUtilization());
+        holder.hospitalization.setText(Float.toString(county.getHospitalAdmission()));
+        holder.cases.setText(Float.toString(county.getCases()));
     }
 
     @Override

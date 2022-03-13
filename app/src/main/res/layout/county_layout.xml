@@ -57,17 +57,18 @@
         app:layout_constraintVertical_bias="0.061" />
 
     <TextView
-        android:id="@+id/communityLevel"
+        android:id="@+id/communityLevelView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/countyNameView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/countyNameView"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="Low" />
 
     <TextView
-        android:id="@+id/cases"
+        android:id="@+id/casesView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
@@ -77,22 +78,22 @@
         tools:text="87.28" />
 
     <TextView
-        android:id="@+id/hospitalization"
+        android:id="@+id/hospitalizationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cases"
+        app:layout_constraintStart_toStartOf="@+id/casesView"
         tools:text="8.4" />
 
     <TextView
-        android:id="@+id/bedPercentage"
+        android:id="@+id/bedPercentageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/hospitalization"
+        app:layout_constraintStart_toStartOf="@+id/hospitalizationView"
         tools:text="4.60%" />
 </androidx.constraintlayout.widget.ConstraintLayout>
