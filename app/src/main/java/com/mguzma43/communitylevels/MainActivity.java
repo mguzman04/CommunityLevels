@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
     private CountyAdapter countyAdapter;
+    private CountyDownloader countyDownloader;
 
     private final List<County> countyList = new ArrayList<>();
 
@@ -37,15 +38,25 @@ public class MainActivity extends AppCompatActivity {
         swipeRefreshLayout = findViewById(R.id.Swiper);
         swipeRefreshLayout.setOnRefreshListener(this::onRefresh);
 
-        County cook = new County("Cook County", "Low", "4.60%", 87.28f, 8.4f);
-        County dupage = new County("DuPage County", "Low", "4.60%", 117.13f, 8.4f);
-        County kane = new County("Kane County", "Low", "3.70%", 106.31f, 5.5f);
+        this.BuildCountyList();
+    }
 
-        this.countyList.add(cook);
-        this.countyList.add(dupage);
-        this.countyList.add(kane);
+    private void BuildCountyList(){
+        ArrayList<String> fips = new ArrayList<>();
+        fips.add("17031"); // cook county
+        fips.add("17043"); // dupage county
+        fips.add("17089"); // kane county
 
-        this.countyAdapter.notifyDataSetChanged();
+        for(String county : fips){
+            countyDownloader = new CountyDownloader(this, county);
+            new Thread(countyDownloader).start();
+        }
+    }
+
+    public void UpdateData(County county){
+        this.countyList.add(county);
+        this.countyAdapter.notifyItemInserted(this.countyList.size() - 1);
+
     }
 
     // method called when refresh action

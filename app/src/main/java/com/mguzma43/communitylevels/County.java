@@ -5,10 +5,10 @@ public class County {
     private String countyName;
     private String communityLevel;
     private String bedUtilization;
-    private float cases;
-    private float hospitalAdmission;
+    private double cases;
+    private double hospitalAdmission;
 
-    County(String countyName, String communityLevel, String bedUtilization, float cases, float hospitalAdmission){
+    County(String countyName, String communityLevel, String bedUtilization, double cases, double hospitalAdmission){
         this.countyName = countyName;
         this.communityLevel = communityLevel;
         this.bedUtilization = bedUtilization;
@@ -22,7 +22,7 @@ public class County {
 
     public String getBedUtilization(){ return this.bedUtilization; }
 
-    public float getCases(){ return this.cases; }
+    public double getCases(){ return this.cases; }
 
-    public float getHospitalAdmission(){ return this.hospitalAdmission; }
+    public double getHospitalAdmission(){ return this.hospitalAdmission; }
 }

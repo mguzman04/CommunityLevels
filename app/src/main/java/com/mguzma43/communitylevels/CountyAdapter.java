@@ -24,10 +24,6 @@ public class CountyAdapter extends RecyclerView.Adapter<CountyViewHolder> {
     public CountyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View countyView = LayoutInflater.from(parent.getContext()).inflate(R.layout.county_layout, parent, false);
 
-        // Add if I want to do something with clicking
-        //countyView.setOnClickListener(this.mainActivity);
-        //countyView.setOnLongClickListener(this.mainActivity);
-
         return new CountyViewHolder(countyView);
     }
 
@@ -39,8 +35,8 @@ public class CountyAdapter extends RecyclerView.Adapter<CountyViewHolder> {
         holder.countyName.setText(county.getCountyName());
         holder.communityLevel.setText(county.getCommunityLevel());
         holder.bedUsage.setText(county.getBedUtilization());
-        holder.hospitalization.setText(Float.toString(county.getHospitalAdmission()));
-        holder.cases.setText(Float.toString(county.getCases()));
+        holder.hospitalization.setText(Double.toString(county.getHospitalAdmission()));
+        holder.cases.setText(Double.toString(county.getCases()));
     }
 
     @Override
