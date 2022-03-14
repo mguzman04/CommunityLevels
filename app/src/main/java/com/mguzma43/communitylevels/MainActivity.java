@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         fips.add("17031"); // cook county
         fips.add("17043"); // dupage county
         fips.add("17089"); // kane county
+        fips.add("17091"); // for testing
 
         for(String county : fips){
             countyDownloader = new CountyDownloader(this, county);
