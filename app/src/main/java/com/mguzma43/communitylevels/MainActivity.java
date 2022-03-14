@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         fips.add("17031"); // cook county
         fips.add("17043"); // dupage county
         fips.add("17089"); // kane county
-        fips.add("17091"); // for testing
+//        fips.add("17091"); // for testing
 
         for(String county : fips){
             countyDownloader = new CountyDownloader(this, county);
@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
     public void UpdateData(County county){
         this.countyList.add(county);
         this.countyAdapter.notifyItemInserted(this.countyList.size() - 1);
+        this.countyList.sort((county1, county2) -> county1.getCountyName().compareTo(county2.getCountyName()));
+        this.countyAdapter.notifyDataSetChanged();
+
 
     }
 
