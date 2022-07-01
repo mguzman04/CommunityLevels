@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="low_light">#006f00</color>
-    <color name="low_dark">#00e600</color>
+    <color name="low_light">#006F00</color>
+    <color name="low_dark">#00E600</color>
     <color name="medium_light">#626200</color>
     <color name="medium_dark">#cdcd00</color>
     <color name="high_light">#c10000</color>
